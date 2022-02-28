@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>3D Viewer</title>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
   </head>
   <body>
-    <noscript>This page contains WebAssembly and JavaScript content, please enable JavaScript in your browser in order to view the content.</noscript>
-    <p>
-      test
-    </p>
+    <noscript
+      >This page contains WebAssembly and JavaScript content, please enable
+      JavaScript in your browser in order to view the content.</noscript
+    >
+    <model-viewer
+      bounds="tight"
+      src="untitled.glb"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      camera-controls
+      environment-image="neutral"
+      poster="poster.webp"
+      shadow-intensity="1.14"
+      auto-rotate
+      exposure="0.98"
+      shadow-softness="0"
+    >
+      <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">View in AR</button>
+      <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png" />
+      </div>
+    </model-viewer>
   </body>
 </html>
