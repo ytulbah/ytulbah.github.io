@@ -30,9 +30,21 @@
         <div class="update-bar"></div>
       </div>
       <button slot="ar-button" id="ar-button">View in AR</button>
-      <div id="ar-prompt">
-        <img src="https://modelviewer.dev/shared-assets/icons/hand.png" />
-      </div>
     </model-viewer>
+
+    <div id="ar-prompt">
+      <img src="https://modelviewer.dev/shared-assets/icons/hand.png" />
+    </div>
+
+    <button id="ar-failure">AR is not tracking!</button>
+    <style>
+      #ar-button:active {
+        background-color: #e8eaed;
+      }
+
+      #ar-button:focus {
+        outline: none;
+      }
+    </style>
   </body>
 </html>
